@@ -1,0 +1,20 @@
+$color-primary: #090B0C !default;
+$color-primary-dark: mix( black, $color-primary, 10% ) !default;
+$color-primary-light-10: mix( white, $color-primary, 10% ) !default;
+$color-primary-light-5: mix( white, $color-primary, 5% ) !default;
+
+$color-accent: #ed1c24 !default;
+$color-accent-dark: darken( $color-accent, 10% ) !default;
+$color-accent-light: lighten( $color-accent, 10% ) !default;
+
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
