@@ -138,6 +138,12 @@ export default {
 .e-input {
   $self: '.e-input';
 
+  --color-input: #343a40;
+  --color-label: #212529;
+  --color-background: transparent;
+  --color-border: #ced4da;
+  --color-shadow: #adb5bd;
+
   width: 100%;
   padding-bottom: 16px;
   position: relative;
@@ -150,16 +156,25 @@ export default {
   &__label {
     margin-bottom: 4px;
     flex-shrink: 0;
+
+    color: var(--color-label);
   }
 
   &__control {
     border-radius: 5px;
     padding: 6px 12px;
     font: inherit;
-    color: inherit;
+    // color: inherit;
+
+    background-color: var(--color-background);
+    color: var(--color-input);
+    border: 1px solid var(--color-border);
 
     &:focus {
       outline: none;
+
+
+      box-shadow: 0 0 2px var(--color-shadow);
     }
   }
 
@@ -170,40 +185,40 @@ export default {
     color: $color-accent-light;
   }
 
-  &--light {
-    #{$self}__control {
-      border: 1px solid $gray-400;
-      color: $gray-800;
+  // &--light {
+  //   #{$self}__control {
+  //     border: 1px solid $gray-400;
+  //     color: $gray-800;
 
-      &:focus {
-        box-shadow: 0 0 2px 0 $gray-500;
-      }
-    }
-  }
+  //     &:focus {
+  //       box-shadow: 0 0 2px 0 $gray-500;
+  //     }
+  //   }
+  // }
 
-  &--dark,
-  &--gray {
-    #{$self}__control {
-      border: 1px solid $gray-600;
-      color: $gray-200;
+  // &--dark,
+  // &--gray {
+  //   #{$self}__control {
+  //     border: 1px solid $gray-600;
+  //     color: $gray-200;
 
-      &:focus {
-        box-shadow: 0 0 2px 0 $gray-500;
-      }
-    }
+  //     &:focus {
+  //       box-shadow: 0 0 2px 0 $gray-500;
+  //     }
+  //   }
 
-    #{$self}__label {
-      color: $gray-100;
-    }
-  }
+  //   #{$self}__label {
+  //     color: $gray-100;
+  //   }
+  // }
 
-  &--dark {
-    background-color: $color-primary;
+  // &--dark {
+  //   background-color: $color-primary;
 
-    #{$self}__control {
-      background-color: $color-primary;
-    }
-  }
+  //   #{$self}__control {
+  //     background-color: $color-primary;
+  //   }
+  // }
 
   &--gray {
     background-color: $gray-900;

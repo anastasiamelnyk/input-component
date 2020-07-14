@@ -65,6 +65,7 @@
           theme="dark"
           name="test1"
           label="Name"
+          :style="`${$options.themes.darkGray} ${$options.themes.dark}`"
           @input="inputError = ''"
         />
       </div>
@@ -75,6 +76,7 @@
           theme="gray"
           name="test2"
           label="Position"
+          :style="`${$options.themes.darkGray} ${$options.themes.gray}`"
           @input="inputError = ''"
         />
       </div>
@@ -125,6 +127,23 @@
 import EInput from './components/e-input';
 
 export default {
+  themes: {
+    darkGray: `
+      --color-input: #e9ecef;
+      --color-label: #f8f9fa;
+      --color-border: #6c757d;
+      --color-shadow: #adb5bd;
+    `,
+    dark: `
+      --color-background: #090B0C;
+    `,
+    gray: `
+      --color-background: #212529;
+    `,
+  },
+
+
+
   name: 'App',
   components: {
     EInput,
